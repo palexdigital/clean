@@ -1060,7 +1060,7 @@
             </div>
 
             <div class="container content-block">
-                <div class="media-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 4rem;">
+                <div class="media-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 4rem;">
                     <div class="card">
                         <div class="card-img" style="height: 280px;"><img src="./image09.jpg" alt="Dr Julius Mbu"></div>
                         <div class="card-body">
@@ -1073,13 +1073,6 @@
                         <div class="card-body">
                             <span class="badge badge-cyan">Main Lecturer</span>
                             <h3>Dr Lebogang Merriam Seoketsa (PhD)</h3>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-img" style="height: 280px;"><img src="./image08.jpg" alt="Ps Elias Chauke"></div>
-                        <div class="card-body">
-                            <span class="badge badge-gold">CLEAN-Public Relations Officer</span>
-                            <h3>Ps Elias Chauke</h3>
                         </div>
                     </div>
                 </div>
@@ -1397,8 +1390,14 @@
         // Form Submit Handler
         function handleFormSubmit(event) {
             event.preventDefault();
-            alert('Thank you for contacting C.L.E.A.N. Your message has been received.');
-            event.target.reset();
+            const name = document.getElementById('rsvp-name').value;
+            const email = document.getElementById('rsvp-email').value;
+            const phone = document.getElementById('rsvp-phone').value;
+            const message = document.getElementById('rsvp-msg').value;
+
+            const text = `New RSVP/Contact Submission:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/27659965641?text=${encodedText}`, '_blank');
         }
 
         // URL Hash Routing
