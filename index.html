@@ -189,17 +189,14 @@
         }
 
         .logo {
-            font-family: var(--font-heading);
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--text-dark);
             display: flex;
             align-items: center;
-            gap: 0.4rem;
         }
 
-        .logo span {
-            color: var(--primary-burgundy);
+        .logo img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
         }
 
         .nav-menu {
@@ -224,43 +221,6 @@
         }
 
         .nav-link:hover {
-            color: var(--primary-burgundy);
-        }
-
-        .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 220px;
-            background-color: var(--bg-white);
-            border-radius: var(--radius-md);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid var(--border-color);
-            padding: 0.8rem 0;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: var(--transition-standard);
-            list-style: none;
-            z-index: 100;
-        }
-
-        .nav-item:hover .dropdown,
-        .nav-item:focus-within .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown li a {
-            display: block;
-            padding: 0.6rem 1.2rem;
-            font-size: 0.9rem;
-            color: var(--text-dark);
-        }
-
-        .dropdown li a:hover {
-            background-color: var(--bg-cream);
             color: var(--primary-burgundy);
         }
 
@@ -597,17 +557,6 @@
             flex-grow: 1;
         }
 
-        .card-footer {
-            margin-top: 1.2rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
         /* CALL TO ACTION MOVEMENT SECTION */
         .cta-banner {
             background-color: var(--primary-burgundy);
@@ -630,13 +579,6 @@
             color: rgba(255, 255, 255, 0.85);
             margin-bottom: 0;
             max-width: 600px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-            min-width: 200px;
         }
 
         /* FELLOWS SLIDER / GRID */
@@ -724,37 +666,6 @@
             border: none;
         }
 
-        /* NEWSLETTER SECTION */
-        .newsletter-section {
-            background-color: var(--bg-cream);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 3.5rem 2rem;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 5rem;
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 0.8rem;
-            max-width: 500px;
-            margin: 1.8rem auto 0;
-        }
-
-        .newsletter-form input[type="email"] {
-            flex-grow: 1;
-            padding: 0.8rem 1.2rem;
-            border-radius: var(--radius-full);
-            border: 1px solid var(--border-color);
-            font-size: 0.95rem;
-            outline: none;
-        }
-
-        .newsletter-form input[type="email"]:focus {
-            border-color: var(--secondary-cyan);
-        }
-
         /* INTERNAL PAGES STYLING */
         .page-header {
             background-color: var(--bg-dark);
@@ -791,8 +702,7 @@
         }
 
         .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group textarea {
             width: 100%;
             padding: 0.8rem 1rem;
             border-radius: var(--radius-sm);
@@ -928,22 +838,6 @@
                 display: flex;
             }
 
-            .dropdown {
-                position: static;
-                width: 100%;
-                box-shadow: none;
-                border: none;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                display: none;
-                padding-left: 1rem;
-            }
-
-            .nav-item.open .dropdown {
-                display: block;
-            }
-
             .nav-actions {
                 display: none;
             }
@@ -959,10 +853,6 @@
             .footer-grid {
                 grid-template-columns: 1fr;
             }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
@@ -972,7 +862,7 @@
     <header>
         <div class="container nav-container">
             <a href="#home" class="logo" onclick="navigateTo('home')">
-                C.L.E.A.N. <span>167-139 NPO</span>
+                <img src="./logo.png" alt="C.L.E.A.N. Logo">
             </a>
 
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
@@ -984,11 +874,7 @@
                     <a href="#home" class="nav-link" onclick="navigateTo('home')">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#lecturers" class="nav-link" onclick="navigateTo('lecturers')">Lecturers ▾</a>
-                    <ul class="dropdown">
-                        <li><a href="#lecturers" onclick="navigateTo('lecturers')">Main Lecturers</a></li>
-                        <li><a href="#lecturers" onclick="navigateTo('lecturers')">Core Leadership Values</a></li>
-                    </ul>
+                    <a href="#lecturers" class="nav-link" onclick="navigateTo('lecturers')">Lecturers</a>
                 </li>
                 <li class="nav-item">
                     <a href="#water-project" class="nav-link" onclick="navigateTo('water-project')">Clean Water Project</a>
@@ -1002,7 +888,6 @@
             </ul>
 
             <div class="nav-actions">
-                <a href="#water-project" class="btn btn-outline" onclick="navigateTo('water-project')">Water Initiative</a>
                 <a href="#rsvp" class="btn btn-burgundy" onclick="navigateTo('rsvp')">Get In Touch</a>
             </div>
         </div>
@@ -1144,19 +1029,19 @@
 
                 <div class="fellows-grid">
                     <div class="fellow-card">
-                        <div class="fellow-avatar"><img src="./image01.jpg" alt="Dr Julius Mbu"></div>
+                        <div class="fellow-avatar"><img src="./image06.jpg" alt="Dr Julius Mbu"></div>
                         <h4>Dr Julius Mbu (PhD)</h4>
                         <span>Founder & CEO</span>
                         <p style="font-size: 0.9rem;">Leading strategic direction, curriculum governance, and public administration initiatives.</p>
                     </div>
                     <div class="fellow-card">
-                        <div class="fellow-avatar"><img src="./image02.jpg" alt="Dr Lebogang Merriam Seoketsa"></div>
+                        <div class="fellow-avatar"><img src="./image07.jpg" alt="Dr Lebogang Merriam Seoketsa"></div>
                         <h4>Dr Lebogang Merriam Seoketsa (PhD)</h4>
                         <span>Main Lecturer</span>
                         <p style="font-size: 0.9rem;">Overseeing academic instruction, leadership seminars, and ethical governance modules.</p>
                     </div>
                     <div class="fellow-card">
-                        <div class="fellow-avatar"><img src="./image03.jpg" alt="Staff & Administration"></div>
+                        <div class="fellow-avatar"><img src="./image08.jpg" alt="Staff & Administration"></div>
                         <h4>Academic & Support Staff</h4>
                         <span>Institutional Operations</span>
                         <p style="font-size: 0.9rem;">Qualified team of lecturers, facilitators, and administrative support personnel.</p>
@@ -1202,7 +1087,7 @@
             <div class="container content-block">
                 <div class="media-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 4rem;">
                     <div class="card">
-                        <div class="card-img" style="height: 280px;"><img src="./image01.jpg" alt="Dr Julius Mbu"></div>
+                        <div class="card-img" style="height: 280px;"><img src="./image09.jpg" alt="Dr Julius Mbu"></div>
                         <div class="card-body">
                             <span class="badge badge-burgundy">Founder & CEO</span>
                             <h3>Dr Julius Mbu (PhD)</h3>
@@ -1210,7 +1095,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-img" style="height: 280px;"><img src="./image02.jpg" alt="Dr Lebogang Merriam Seoketsa"></div>
+                        <div class="card-img" style="height: 280px;"><img src="./image10.jpg" alt="Dr Lebogang Merriam Seoketsa"></div>
                         <div class="card-body">
                             <span class="badge badge-cyan">Main Lecturer</span>
                             <h3>Dr Lebogang Merriam Seoketsa (PhD)</h3>
@@ -1228,7 +1113,7 @@
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
                         <div style="background: var(--bg-cream); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
                             <div style="margin-bottom: 1rem; height: 160px; overflow: hidden; border-radius: var(--radius-sm);">
-                                <img src="./image06.jpg" alt="Servant Leadership" style="width: 100%; height: 100%;">
+                                <img src="./image11.jpg" alt="Servant Leadership" style="width: 100%; height: 100%;">
                             </div>
                             <h3 style="color: var(--primary-burgundy); margin-bottom: 0.8rem; font-size: 1.3rem;">Servant Leadership</h3>
                             <p style="font-size: 0.95rem;">Emphasizing humble service, community-first mindsets, and direct engagement with public needs.</p>
@@ -1236,7 +1121,7 @@
 
                         <div style="background: var(--bg-cream); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
                             <div style="margin-bottom: 1rem; height: 160px; overflow: hidden; border-radius: var(--radius-sm);">
-                                <img src="./image07.jpg" alt="Thought Leadership" style="width: 100%; height: 100%;">
+                                <img src="./image12.jpg" alt="Thought Leadership" style="width: 100%; height: 100%;">
                             </div>
                             <h3 style="color: var(--secondary-cyan); margin-bottom: 0.8rem; font-size: 1.3rem;">Thought Leadership</h3>
                             <p style="font-size: 0.95rem;">Fostering critical thinking, educational innovation, and strategic problem-solving for administrative challenges.</p>
@@ -1244,7 +1129,7 @@
 
                         <div style="background: var(--bg-cream); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
                             <div style="margin-bottom: 1rem; height: 160px; overflow: hidden; border-radius: var(--radius-sm);">
-                                <img src="./image08.jpg" alt="Stewardship Leadership" style="width: 100%; height: 100%;">
+                                <img src="./image13.jpg" alt="Stewardship Leadership" style="width: 100%; height: 100%;">
                             </div>
                             <h3 style="color: var(--accent-gold); margin-bottom: 0.8rem; font-size: 1.3rem;">Stewardship Leadership</h3>
                             <p style="font-size: 0.95rem;">Promoting financial accountability, ethical resource management, and responsible governance.</p>
@@ -1273,7 +1158,7 @@
                         <p>This initiative operates on a custom-designed community ownership model that involves training local individuals, particularly women and youth, in basic maintenance, equipment care, and water governance, thereby ensuring sustainable impact and resource protection.</p>
                     </div>
                     <div>
-                        <img src="./image05.jpg" alt="Solar Powered Borehole Initiative" style="border-radius: var(--radius-md); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <img src="./image14.jpg" alt="Solar Powered Borehole Initiative" style="border-radius: var(--radius-md); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                     </div>
                 </div>
 
@@ -1323,42 +1208,42 @@
             <div class="container content-block">
                 <div class="media-grid">
                     <div class="card">
-                        <div class="card-img" style="height: 240px;"><img src="./image01.jpg" alt="Academic Regalia Graduation"></div>
+                        <div class="card-img" style="height: 240px;"><img src="./image15.jpg" alt="Academic Regalia Graduation"></div>
                         <div class="card-body">
                             <h4>Academic Ceremonies</h4>
                             <p>Staff and graduates depicted in official academic graduation regalia during institutional ceremonies.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-img" style="height: 240px;"><img src="./image02.jpg" alt="Lecturer Seminar"></div>
+                        <div class="card-img" style="height: 240px;"><img src="./image16.jpg" alt="Lecturer Seminar"></div>
                         <div class="card-body">
                             <h4>Lectures & Seminars</h4>
                             <p>Instructional sessions led by Dr Lebogang Merriam Seoketsa and academic faculty.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-img" style="height: 240px;"><img src="./image03.jpg" alt="Leadership Network"></div>
+                        <div class="card-img" style="height: 240px;"><img src="./image17.jpg" alt="Leadership Network"></div>
                         <div class="card-body">
                             <h4>Youth Mentorship Groups</h4>
                             <p>Young leaders participating in ethical leadership and public administration workshops.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-img" style="height: 240px;"><img src="./image04.jpg" alt="Graduates Group Photo"></div>
+                        <div class="card-img" style="height: 240px;"><img src="./image18.jpg" alt="Graduates Group Photo"></div>
                         <div class="card-body">
                             <h4>Graduating Cohorts</h4>
                             <p>Graduates holding completion certificates in administrative service delivery programs.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-img" style="height: 240px;"><img src="./image05.jpg" alt="Clean Water Site Visit"></div>
+                        <div class="card-img" style="height: 240px;"><img src="./image19.jpg" alt="Clean Water Site Visit"></div>
                         <div class="card-body">
                             <h4>Rural Water Fieldwork</h4>
                             <p>Borehole installation and water committee governance workshops in rural communities.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-img" style="height: 240px;"><img src="./image06.jpg" alt="Community Outreach"></div>
+                        <div class="card-img" style="height: 240px;"><img src="./image20.jpg" alt="Community Outreach"></div>
                         <div class="card-body">
                             <h4>Mobile Water Education Unit</h4>
                             <p>Hygiene instruction and sanitation awareness workshops conducted across rural schools.</p>
@@ -1447,7 +1332,7 @@
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="#home" onclick="navigateTo('home')">Home</a></li>
-                        <li><a href="#lecturers" onclick="navigateTo('lecturers')">Main Lecturers</a></li>
+                        <li><a href="#lecturers" onclick="navigateTo('lecturers')">Lecturers</a></li>
                         <li><a href="#water-project" onclick="navigateTo('water-project')">Clean Water Project</a></li>
                         <li><a href="#gallery" onclick="navigateTo('gallery')">Gallery</a></li>
                         <li><a href="#rsvp" onclick="navigateTo('rsvp')">RSVP / Contact</a></li>
