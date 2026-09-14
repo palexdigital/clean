@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.L.E.A.N. — Centre for Leadership Excellence for African Nations</title>
+    <meta name="description" content="Centre for Leadership Excellence for African Nations (167-139 NPO). Equipping, mentoring and training young African leaders for ethical leadership and administrative service delivery.">
+    
+    <!-- Dynamic Web Favicon / App Icon generated from SVG Logo -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%238B1E24'/><text x='50' y='62' font-family='Georgia, serif' font-size='42' font-weight='bold' fill='%23FFFFFF' text-anchor='middle'>C</text></svg>">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="C.L.E.A.N. — Centre for Leadership Excellence for African Nations">
+    <meta property="og:description" content="Equipping, mentoring and training young African leaders with a vision to build active ethical leaders in South Africa and across the continent.">
+    <meta property="og:image" content="./image01.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Stylesheet -->
+    <style>
+        /* CSS RESET & VARIABLES */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-burgundy: #8B1E24;
+            --primary-burgundy-hover: #70161B;
+            --secondary-cyan: #00A8B5;
+            --secondary-cyan-hover: #008893;
+            --accent-gold: #E5A823;
+            --bg-cream: #FBF9F5;
+            --bg-white: #FFFFFF;
+            --bg-dark: #1E1E1E;
+            --bg-dark-card: #2B2B2B;
+            --text-dark: #111111;
+            --text-muted: #555555;
+            --text-light: #F1F1F1;
+            --border-color: #E2DDD5;
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 24px;
+            --radius-full: 9999px;
+            --font-heading: 'Georgia', serif;
+            --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --transition-standard: all 0.25s ease-in-out;
+            --max-width: 1280px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-dark);
+        }
+
+        h1 { font-size: clamp(2.2rem, 4vw, 3.8rem); letter-spacing: -0.02em; }
+        h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); letter-spacing: -0.01em; }
+        h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
+        h4 { font-size: 1.2rem; }
+        p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 1rem; }
+        p:last-child { margin-bottom: 0; }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition-standard);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* UTILITIES & BUTTONS */
+        .container {
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.8rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition-standard);
+            gap: 0.5rem;
+            text-align: center;
+        }
+
+        .btn-burgundy {
+            background-color: var(--primary-burgundy);
+            color: var(--bg-white);
+        }
+
+        .btn-burgundy:hover {
+            background-color: var(--primary-burgundy-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-cyan {
+            background-color: var(--secondary-cyan);
+            color: var(--bg-white);
+        }
+
+        .btn-cyan:hover {
+            background-color: var(--secondary-cyan-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1.5px solid var(--text-dark);
+            color: var(--text-dark);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--text-dark);
+            color: var(--bg-white);
+        }
+
+        .btn-outline-white {
+            background-color: transparent;
+            border: 1.5px solid var(--bg-white);
+            color: var(--bg-white);
+        }
+
+        .btn-outline-white:hover {
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.8rem;
+        }
+
+        .badge-cyan { background-color: rgba(0, 168, 181, 0.15); color: var(--secondary-cyan); }
+        .badge-burgundy { background-color: rgba(139, 30, 36, 0.15); color: var(--primary-burgundy); }
+        .badge-gold { background-color: rgba(229, 168, 35, 0.2); color: var(--accent-gold); }
+
+        /* HEADER & NAVIGATION */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(251, 249, 245, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition-standard);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .logo span {
+            color: var(--primary-burgundy);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-burgundy);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 220px;
+            background-color: var(--bg-white);
+            border-radius: var(--radius-md);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-color);
+            padding: 0.8rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition-standard);
+            list-style: none;
+            z-index: 100;
+        }
+
+        .nav-item:hover .dropdown,
+        .nav-item:focus-within .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown li a {
+            display: block;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .dropdown li a:hover {
+            background-color: var(--bg-cream);
+            color: var(--primary-burgundy);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* PAGE VIEWS MANAGEMENT */
+        .page-view {
+            display: none;
+        }
+
+        .page-view.active {
+            display: block;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 4rem 0 5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 520px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            position: relative;
+        }
+
+        .hero-img-card {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            position: relative;
+        }
+
+        .hero-img-card img {
+            width: 100%;
+            height: 220px;
+            transition: var(--transition-standard);
+        }
+
+        .hero-img-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .hero-img-card.tall {
+            grid-row: span 2;
+        }
+
+        .hero-img-card.tall img {
+            height: 100%;
+            min-height: 450px;
+        }
+
+        /* STATS COUNTER GRID */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem 2rem;
+            border: 1px solid var(--border-color);
+            margin: 2rem 0 4rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.8rem;
+            color: var(--primary-burgundy);
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-item p {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        /* INSIGHTS & IMPACT SECTION */
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .section-header h2 {
+            margin-top: 0.5rem;
+        }
+
+        .insight-feature {
+            background-color: var(--bg-white);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            margin-bottom: 3rem;
+        }
+
+        .insight-img {
+            height: 100%;
+            min-height: 380px;
+        }
+
+        .insight-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .insight-content {
+            padding: 3.5rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .insight-content h3 {
+            margin: 0.8rem 0 1rem;
+            font-size: 2rem;
+        }
+
+        /* BANNER SECTION (TEAL BACKGROUND) */
+        .teal-banner {
+            background-color: var(--secondary-cyan);
+            color: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 4rem 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 4rem 0;
+        }
+
+        .teal-banner h2, .teal-banner p {
+            color: var(--bg-white);
+        }
+
+        .teal-banner p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .teal-banner-img {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .teal-banner-img img {
+            width: 100%;
+            height: 320px;
+        }
+
+        /* ECOSYSTEM TABBED / GRID SECTION */
+        .dark-ecosystem {
+            background-color: var(--bg-dark);
+            color: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 4rem 3rem;
+            margin: 4rem 0;
+        }
+
+        .dark-ecosystem h2, .dark-ecosystem h3, .dark-ecosystem h4 {
+            color: var(--bg-white);
+        }
+
+        .dark-ecosystem p {
+            color: #BBBBBB;
+        }
+
+        .ecosystem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .ecosystem-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .eco-card {
+            background-color: var(--bg-dark-card);
+            border: 1px solid #3A3A3A;
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition-standard);
+        }
+
+        .eco-card:hover, .eco-card.active {
+            border-color: var(--secondary-cyan);
+            transform: translateX(5px);
+        }
+
+        .eco-card h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .eco-card .icon-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--secondary-cyan);
+        }
+
+        .eco-card:nth-child(2) .icon-dot { background-color: var(--accent-gold); }
+        .eco-card:nth-child(3) .icon-dot { background-color: var(--primary-burgundy); }
+        .eco-card:nth-child(4) .icon-dot { background-color: #4CAF50; }
+
+        .ecosystem-details {
+            background-color: var(--bg-dark-card);
+            border-radius: var(--radius-md);
+            border: 1px solid #3A3A3A;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .ecosystem-details ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .ecosystem-details ul li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #333;
+            color: #DDD;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .ecosystem-details ul li::before {
+            content: "✓";
+            color: var(--secondary-cyan);
+            font-weight: bold;
+        }
+
+        /* STORIES & MEDIA GRID */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .card {
+            background-color: var(--bg-white);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: var(--transition-standard);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .card-img {
+            height: 200px;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body h3, .card-body h4 {
+            margin-bottom: 0.8rem;
+            font-size: 1.25rem;
+        }
+
+        .card-body p {
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            margin-top: 1.2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* CALL TO ACTION MOVEMENT SECTION */
+        .cta-banner {
+            background-color: var(--primary-burgundy);
+            color: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 4rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .cta-banner h2 {
+            color: var(--bg-white);
+            margin-bottom: 0.8rem;
+        }
+
+        .cta-banner p {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 0;
+            max-width: 600px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            min-width: 200px;
+        }
+
+        /* FELLOWS SLIDER / GRID */
+        .fellows-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .fellow-card {
+            background-color: var(--bg-white);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .fellow-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            overflow: hidden;
+            border: 3px solid var(--bg-cream);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .fellow-avatar img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .fellow-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .fellow-card span {
+            font-size: 0.85rem;
+            color: var(--primary-burgundy);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* LOCATION & MAP SECTION */
+        .location-section {
+            background-color: var(--bg-white);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 4rem 0;
+        }
+
+        .location-info {
+            padding: 3.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .location-info address {
+            font-style: normal;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 1.5rem 0;
+            color: var(--text-dark);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            background-color: #E5E3DF;
+            position: relative;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* NEWSLETTER SECTION */
+        .newsletter-section {
+            background-color: var(--bg-cream);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.8rem;
+            max-width: 500px;
+            margin: 1.8rem auto 0;
+        }
+
+        .newsletter-form input[type="email"] {
+            flex-grow: 1;
+            padding: 0.8rem 1.2rem;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border-color);
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .newsletter-form input[type="email"]:focus {
+            border-color: var(--secondary-cyan);
+        }
+
+        /* INTERNAL PAGES STYLING */
+        .page-header {
+            background-color: var(--bg-dark);
+            color: var(--bg-white);
+            padding: 5rem 0 4rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--bg-white);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: #CCC;
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+        }
+
+        .content-block {
+            padding: 4rem 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            font-family: inherit;
+            font-size: 1rem;
+            background-color: var(--bg-white);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--bg-dark);
+            color: #999999;
+            padding: 5rem 0 2rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(4, 1fr);
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand h3 {
+            color: var(--bg-white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: #888888;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col h4 {
+            color: var(--bg-white);
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--bg-white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2D2D2D;
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .credit-link {
+            color: var(--secondary-cyan);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition-standard);
+        }
+
+        .credit-link:hover {
+            color: var(--bg-white);
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE DESIGN BREAKPOINTS */
+        @media (max-width: 1024px) {
+            .hero, .teal-banner, .insight-feature, .ecosystem-grid, .location-section {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .media-grid, .fellows-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-banner p {
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-white);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+                gap: 1.2rem;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                display: none;
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .dropdown {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+                border: none;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+                padding-left: 1rem;
+            }
+
+            .nav-item.open .dropdown {
+                display: block;
+            }
+
+            .nav-actions {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .media-grid, .fellows-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER NAVIGATION -->
+    <header>
+        <div class="container nav-container">
+            <a href="#home" class="logo" onclick="navigateTo('home')">
+                C.L.E.A.N. <span>167-139 NPO</span>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                ☰
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link" onclick="navigateTo('home')">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#lecturers" class="nav-link" onclick="navigateTo('lecturers')">Lecturers ▾</a>
+                    <ul class="dropdown">
+                        <li><a href="#lecturers" onclick="navigateTo('lecturers')">Main Lecturers</a></li>
+                        <li><a href="#lecturers" onclick="navigateTo('lecturers')">Core Leadership Values</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#water-project" class="nav-link" onclick="navigateTo('water-project')">Clean Water Project</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link" onclick="navigateTo('gallery')">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#rsvp" class="nav-link" onclick="navigateTo('rsvp')">RSVP / Contact</a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#water-project" class="btn btn-outline" onclick="navigateTo('water-project')">Water Initiative</a>
+                <a href="#rsvp" class="btn btn-burgundy" onclick="navigateTo('rsvp')">Get In Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA WITH ROUTING -->
+    <main id="main-content">
+
+        <!-- ================= PAGE: HOME ================= -->
+        <div id="page-home" class="page-view active">
+            
+            <!-- HERO SECTION -->
+            <section class="container hero">
+                <div class="hero-content">
+                    <span class="badge badge-burgundy">Non-Profit Organization (167-139 NPO)</span>
+                    <h1>Centre for Leadership Excellence for African Nations</h1>
+                    <p>To equip, mentor and train young African leaders with a vision to build active ethical leaders and establish a support network for them to achieve excellence in administrative service delivery.</p>
+                    <div class="hero-ctas">
+                        <a href="#water-project" class="btn btn-burgundy" onclick="navigateTo('water-project')">Clean Water Project →</a>
+                        <a href="#lecturers" class="btn btn-outline" onclick="navigateTo('lecturers')">Meet Our Lecturers</a>
+                    </div>
+                </div>
+                <div class="hero-gallery">
+                    <div class="hero-img-card tall">
+                        <img src="./image01.jpg" alt="Leadership & Staff in Academic Regalia">
+                    </div>
+                    <div class="hero-img-card">
+                        <img src="./image02.jpg" alt="Dr Lebogang Merriam Seoketsa Main Lecturer">
+                    </div>
+                    <div class="hero-img-card">
+                        <img src="./image03.jpg" alt="C.L.E.A.N. Institutional Ceremonies">
+                    </div>
+                </div>
+            </section>
+
+            <!-- STATS COUNTER -->
+            <section class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>25+</h3>
+                        <p>Community Initiatives</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>150+</h3>
+                        <p>Leaders Trained & Mentored</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>15+</h3>
+                        <p>Partner Regions & Impact Zones</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT & MISSION SECTION -->
+            <section class="container section-padding">
+                <div class="section-header">
+                    <span class="badge badge-cyan">Our Foundation</span>
+                    <h2>About C.L.E.A.N.</h2>
+                    <p>Building active ethical leaders across African nations through structured mentorship, public administration training, and strategic community development.</p>
+                </div>
+
+                <div class="insight-feature">
+                    <div class="insight-img">
+                        <img src="./image04.jpg" alt="Graduation Ceremony & Leadership Group">
+                    </div>
+                    <div class="insight-content">
+                        <span class="badge badge-burgundy">Our Mission</span>
+                        <h3>Equipping Ethical Leaders for Excellence</h3>
+                        <p>To equip, mentor and train young African leaders with a vision to build active ethical leaders and establish a support network for them to achieve excellence in administrative service delivery.</p>
+                        <p style="font-weight: 600; color: var(--primary-burgundy);">Centre for Leadership Excellence for African Nations | 167-139 NPO</p>
+                        <a href="#lecturers" class="btn btn-outline" style="align-self: flex-start; margin-top: 1rem;" onclick="navigateTo('lecturers')">Our Faculty & Values →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TEAL BANNER SECTION -->
+            <section class="container">
+                <div class="teal-banner">
+                    <div>
+                        <span class="badge badge-gold">Flagship Humanitarian Initiative</span>
+                        <h2>Clean Water for Africa</h2>
+                        <p>A dedicated social impact initiative delivering clean and safe drinking water to underserved rural and semi-urban communities throughout South Africa utilizing solar-powered boreholes.</p>
+                        <a href="#water-project" class="btn btn-outline-white" onclick="navigateTo('water-project')">Explore Clean Water Project</a>
+                    </div>
+                    <div class="teal-banner-img">
+                        <img src="./image05.jpg" alt="Clean Water Project Implementation">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ECOSYSTEM SECTION (CORE VALUES - DARK) -->
+            <section class="container">
+                <div class="dark-ecosystem">
+                    <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                        <span class="badge badge-gold">Leadership Pillars</span>
+                        <h2>What Defines Us as C.L.E.A.N.</h2>
+                        <p>Our curriculum and organizational framework are grounded in three foundational leadership values.</p>
+                    </div>
+
+                    <div class="ecosystem-grid">
+                        <div class="ecosystem-list">
+                            <div class="eco-card active" onclick="switchEcoTab('tab1', this)">
+                                <h4><span class="icon-dot"></span> Servant Leadership</h4>
+                                <p>Emphasizing humble service, community-first mindsets, and direct engagement.</p>
+                            </div>
+                            <div class="eco-card" onclick="switchEcoTab('tab2', this)">
+                                <h4><span class="icon-dot"></span> Thought Leadership</h4>
+                                <p>Fostering critical thinking and educational innovation for administrative challenges.</p>
+                            </div>
+                            <div class="eco-card" onclick="switchEcoTab('tab3', this)">
+                                <h4><span class="icon-dot"></span> Stewardship Leadership</h4>
+                                <p>Promoting financial accountability, ethical resource management, and governance.</p>
+                            </div>
+                        </div>
+
+                        <div class="ecosystem-details" id="ecoTabContent">
+                            <div>
+                                <h3 id="tabTitle">Servant Leadership</h3>
+                                <p id="tabDesc">Cultivating a mindset centered on putting public and community needs first, fostering empathy, humility, and active civic participation in administrative delivery.</p>
+                                <ul>
+                                    <li id="tabItem1">Community-first administrative approaches</li>
+                                    <li id="tabItem2">Ethical engagement with underserved populations</li>
+                                    <li id="tabItem3">Humble and accountable governance models</li>
+                                </ul>
+                            </div>
+                            <a href="#lecturers" class="btn btn-cyan" style="align-self: flex-start; margin-top: 1.5rem;" onclick="navigateTo('lecturers')">Learn More About Our Values</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FACULTY & LEADERSHIP DIRECTORY -->
+            <section class="container section-padding">
+                <div class="section-header">
+                    <span class="badge badge-burgundy">Institutional Leadership</span>
+                    <h2>Staff & Leadership</h2>
+                    <p>Meet our executive leadership and academic personnel driving ethical leadership across African nations.</p>
+                </div>
+
+                <div class="fellows-grid">
+                    <div class="fellow-card">
+                        <div class="fellow-avatar"><img src="./image01.jpg" alt="Dr Julius Mbu"></div>
+                        <h4>Dr Julius Mbu (PhD)</h4>
+                        <span>Founder & CEO</span>
+                        <p style="font-size: 0.9rem;">Leading strategic direction, curriculum governance, and public administration initiatives.</p>
+                    </div>
+                    <div class="fellow-card">
+                        <div class="fellow-avatar"><img src="./image02.jpg" alt="Dr Lebogang Merriam Seoketsa"></div>
+                        <h4>Dr Lebogang Merriam Seoketsa (PhD)</h4>
+                        <span>Main Lecturer</span>
+                        <p style="font-size: 0.9rem;">Overseeing academic instruction, leadership seminars, and ethical governance modules.</p>
+                    </div>
+                    <div class="fellow-card">
+                        <div class="fellow-avatar"><img src="./image03.jpg" alt="Staff & Administration"></div>
+                        <h4>Academic & Support Staff</h4>
+                        <span>Institutional Operations</span>
+                        <p style="font-size: 0.9rem;">Qualified team of lecturers, facilitators, and administrative support personnel.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LOCATION & GOOGLE MAP SECTION -->
+            <section class="container">
+                <div class="location-section">
+                    <div class="location-info">
+                        <span class="badge badge-cyan">Headquarters</span>
+                        <h2>Visit C.L.E.A.N. Headquarters</h2>
+                        <p>Our primary operational center coordinates leadership seminars, water project logistics, and administrative support networks.</p>
+                        <address>
+                            <strong>Centre for Leadership Excellence for African Nations</strong><br>
+                            84 Bourke Street<br>
+                            Sunnyside, Pretoria<br>
+                            South Africa<br>
+                            <strong>Phone:</strong> +27 65 996 5641<br>
+                            <strong>Email:</strong> cleanafricanleadership@gmail.com
+                        </address>
+                        <a href="https://maps.google.com/?q=84+Bourke+Street,+Sunnyside,+Pretoria,+South+Africa" target="_blank" rel="noopener noreferrer" class="btn btn-burgundy" style="align-self: flex-start;">Get Directions via Google Maps ↗</a>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.5388031580173!2d28.2083!3d-25.7535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95622036c8bd8f%3A0x8848cbca1965e55e!2s84%20Bourke%20St%2C%20Sunnyside%2C%20Pretoria%2C%200002%2C%20South%20Africa!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="C.L.E.A.N. Office Location"></iframe>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+        <!-- ================= PAGE: LECTURERS ================= -->
+        <div id="page-lecturers" class="page-view">
+            <div class="page-header">
+                <div class="container">
+                    <h1>Main Lecturers & Values</h1>
+                    <p>Distinguished academic personnel leading ethical leadership development and youth mentorship.</p>
+                </div>
+            </div>
+
+            <div class="container content-block">
+                <div class="media-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 4rem;">
+                    <div class="card">
+                        <div class="card-img" style="height: 280px;"><img src="./image01.jpg" alt="Dr Julius Mbu"></div>
+                        <div class="card-body">
+                            <span class="badge badge-burgundy">Founder & CEO</span>
+                            <h3>Dr Julius Mbu (PhD)</h3>
+                            <p>Academic and administrative head leading overall organizational strategic direction, curriculum governance, public administration initiatives, and institutional outreach.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img" style="height: 280px;"><img src="./image02.jpg" alt="Dr Lebogang Merriam Seoketsa"></div>
+                        <div class="card-body">
+                            <span class="badge badge-cyan">Main Lecturer</span>
+                            <h3>Dr Lebogang Merriam Seoketsa (PhD)</h3>
+                            <p>Senior leadership academic overseeing youth leadership seminars, academic instruction, and ethical governance modules.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background-color: var(--bg-white); padding: 3.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                    <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem;">
+                        <span class="badge badge-gold">Our Foundation</span>
+                        <h2>Our Values: What Defines Us as C.L.E.A.N.</h2>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                        <div style="background: var(--bg-cream); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                            <div style="margin-bottom: 1rem; height: 160px; overflow: hidden; border-radius: var(--radius-sm);">
+                                <img src="./image06.jpg" alt="Servant Leadership" style="width: 100%; height: 100%;">
+                            </div>
+                            <h3 style="color: var(--primary-burgundy); margin-bottom: 0.8rem; font-size: 1.3rem;">Servant Leadership</h3>
+                            <p style="font-size: 0.95rem;">Emphasizing humble service, community-first mindsets, and direct engagement with public needs.</p>
+                        </div>
+
+                        <div style="background: var(--bg-cream); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                            <div style="margin-bottom: 1rem; height: 160px; overflow: hidden; border-radius: var(--radius-sm);">
+                                <img src="./image07.jpg" alt="Thought Leadership" style="width: 100%; height: 100%;">
+                            </div>
+                            <h3 style="color: var(--secondary-cyan); margin-bottom: 0.8rem; font-size: 1.3rem;">Thought Leadership</h3>
+                            <p style="font-size: 0.95rem;">Fostering critical thinking, educational innovation, and strategic problem-solving for administrative challenges.</p>
+                        </div>
+
+                        <div style="background: var(--bg-cream); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                            <div style="margin-bottom: 1rem; height: 160px; overflow: hidden; border-radius: var(--radius-sm);">
+                                <img src="./image08.jpg" alt="Stewardship Leadership" style="width: 100%; height: 100%;">
+                            </div>
+                            <h3 style="color: var(--accent-gold); margin-bottom: 0.8rem; font-size: 1.3rem;">Stewardship Leadership</h3>
+                            <p style="font-size: 0.95rem;">Promoting financial accountability, ethical resource management, and responsible governance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================= PAGE: CLEAN WATER PROJECT ================= -->
+        <div id="page-water-project" class="page-view">
+            <div class="page-header">
+                <div class="container">
+                    <h1>Clean Water Project</h1>
+                    <p>Clean Water for Africa: Delivering sustainable drinking water infrastructure to rural and semi-urban communities across South Africa.</p>
+                </div>
+            </div>
+
+            <div class="container content-block">
+                <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+                    <div>
+                        <span class="badge badge-cyan">Flagship Initiative</span>
+                        <h2>Clean Water for Africa</h2>
+                        <p><strong>CLEAN WATER FOR AFRICA</strong> is a social impact initiative focused on providing access to clean and safe drinking water to underserved rural and semi-urban communities throughout South Africa. The primary execution mechanism is the implementation of solar-powered boreholes, which serve as a sustainable and environmentally friendly sub-surface water drawing source and purification system.</p>
+                        <p>This initiative operates on a custom-designed community ownership model that involves training local individuals, particularly women and youth, in basic maintenance, equipment care, and water governance, thereby ensuring sustainable impact and resource protection.</p>
+                    </div>
+                    <div>
+                        <img src="./image05.jpg" alt="Solar Powered Borehole Initiative" style="border-radius: var(--radius-md); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+
+                <div style="background-color: var(--bg-white); padding: 3rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 4rem;">
+                    <h2 style="margin-bottom: 2rem; text-align: center;">Strategic Goals & Regional Scope</h2>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+                        <div style="padding: 1.2rem; background: var(--bg-cream); border-radius: var(--radius-sm); border-left: 4px solid var(--primary-burgundy);">
+                            <strong>Target Regions:</strong> Construct and implement solar-powered boreholes in Limpopo, Eastern Cape, and North West provinces.
+                        </div>
+                        <div style="padding: 1.2rem; background: var(--bg-cream); border-radius: var(--radius-sm); border-left: 4px solid var(--secondary-cyan);">
+                            <strong>Mobile Water Education Unit:</strong> Deploy a mobile unit providing hygiene awareness and sanitation instruction serving over 50 rural schools.
+                        </div>
+                        <div style="padding: 1.2rem; background: var(--bg-cream); border-radius: var(--radius-sm); border-left: 4px solid var(--accent-gold);">
+                            <strong>Technical Partnerships:</strong> Partner with a minimum of 3 local water governance bodies and municipal community organizations for joint watershed management.
+                        </div>
+                        <div style="padding: 1.2rem; background: var(--bg-cream); border-radius: var(--radius-sm); border-left: 4px solid #4CAF50;">
+                            <strong>Smart Monitoring:</strong> Implement a smart monitoring system facilitating real-time tracking of water output and performance.
+                        </div>
+                        <div style="padding: 1.2rem; background: var(--bg-cream); border-radius: var(--radius-sm); border-left: 4px solid var(--primary-burgundy);">
+                            <strong>Water Champions Network:</strong> Engage 100 local women and youth in leadership roles focused on water advocacy and management.
+                        </div>
+                        <div style="padding: 1.2rem; background: var(--bg-cream); border-radius: var(--radius-sm); border-left: 4px solid var(--secondary-cyan);">
+                            <strong>Scale & Impact:</strong> Extend access to clean drinking water to over 100,000 individuals across additional provinces.
+                        </div>
+                        <div style="padding: 1.2rem; background: var(--bg-cream); border-radius: var(--radius-sm); border-left: 4px solid var(--accent-gold);">
+                            <strong>Policy Advocacy:</strong> Package and disseminate our community-driven borehole model to key national decision-makers.
+                        </div>
+                        <div style="padding: 1.2rem; background: var(--bg-cream); border-radius: var(--radius-sm); border-left: 4px solid #4CAF50;">
+                            <strong>SADC Replication:</strong> Initiate replication efforts in neighboring countries such as Lesotho or Zimbabwe.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================= PAGE: GALLERY ================= -->
+        <div id="page-gallery" class="page-view">
+            <div class="page-header">
+                <div class="container">
+                    <h1>Institutional Gallery</h1>
+                    <p>Capturing graduation ceremonies, academic workshops, community engagements, and staff activities.</p>
+                </div>
+            </div>
+
+            <div class="container content-block">
+                <div class="media-grid">
+                    <div class="card">
+                        <div class="card-img" style="height: 240px;"><img src="./image01.jpg" alt="Academic Regalia Graduation"></div>
+                        <div class="card-body">
+                            <h4>Academic Ceremonies</h4>
+                            <p>Staff and graduates depicted in official academic graduation regalia during institutional ceremonies.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img" style="height: 240px;"><img src="./image02.jpg" alt="Lecturer Seminar"></div>
+                        <div class="card-body">
+                            <h4>Lectures & Seminars</h4>
+                            <p>Instructional sessions led by Dr Lebogang Merriam Seoketsa and academic faculty.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img" style="height: 240px;"><img src="./image03.jpg" alt="Leadership Network"></div>
+                        <div class="card-body">
+                            <h4>Youth Mentorship Groups</h4>
+                            <p>Young leaders participating in ethical leadership and public administration workshops.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img" style="height: 240px;"><img src="./image04.jpg" alt="Graduates Group Photo"></div>
+                        <div class="card-body">
+                            <h4>Graduating Cohorts</h4>
+                            <p>Graduates holding completion certificates in administrative service delivery programs.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img" style="height: 240px;"><img src="./image05.jpg" alt="Clean Water Site Visit"></div>
+                        <div class="card-body">
+                            <h4>Rural Water Fieldwork</h4>
+                            <p>Borehole installation and water committee governance workshops in rural communities.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img" style="height: 240px;"><img src="./image06.jpg" alt="Community Outreach"></div>
+                        <div class="card-body">
+                            <h4>Mobile Water Education Unit</h4>
+                            <p>Hygiene instruction and sanitation awareness workshops conducted across rural schools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================= PAGE: RSVP / CONTACT ================= -->
+        <div id="page-rsvp" class="page-view">
+            <div class="page-header">
+                <div class="container">
+                    <h1>RSVP & Contact Us</h1>
+                    <p>Reach out to C.L.E.A.N. for program inquiries, leadership mentorship, or Clean Water Project partnerships.</p>
+                </div>
+            </div>
+
+            <div class="container content-block">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                    
+                    <div style="background-color: var(--bg-white); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                        <span class="badge badge-burgundy">Inquiry & RSVP Form</span>
+                        <h3 style="margin-bottom: 1rem;">Any Questions?</h3>
+                        <p style="margin-bottom: 2rem;">Please fill out the details below to RSVP or contact our administrative team.</p>
+                        <form onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <label for="rsvp-name">NAME *</label>
+                                <input type="text" id="rsvp-name" placeholder="First Name / Last Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rsvp-email">EMAIL *</label>
+                                <input type="email" id="rsvp-email" placeholder="email@domain.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rsvp-phone">PHONE / CELL</label>
+                                <input type="tel" id="rsvp-phone" placeholder="+27 ...">
+                            </div>
+                            <div class="form-group">
+                                <label for="rsvp-msg">MESSAGE</label>
+                                <textarea id="rsvp-msg" placeholder="Write your message or inquiry here..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-burgundy" style="width: 100%;">SUBMIT</button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <div style="background-color: var(--bg-white); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 2rem;">
+                            <span class="badge badge-cyan">Contact Details</span>
+                            <h3 style="margin-bottom: 1rem;">C.L.E.A.N. Secretariat</h3>
+                            <address style="font-style: normal; line-height: 1.8;">
+                                <strong>Centre for Leadership Excellence for African Nations</strong><br>
+                                84 Bourke street, Sunnyside Pretoria<br>
+                                South Africa<br><br>
+                                <strong>Cell:</strong> +27659965641<br>
+                                <strong>Email:</strong> cleanafricanleadership@gmail.com<br>
+                                <strong>NPO Registration:</strong> 167-139 NPO
+                            </address>
+                        </div>
+
+                        <div style="border-radius: var(--radius-lg); overflow: hidden; height: 260px; border: 1px solid var(--border-color);">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.5388031580173!2d28.2083!3d-25.7535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95622036c8bd8f%3A0x8848cbca1965e55e!2s84%20Bourke%20St%2C%20Sunnyside%2C%20Pretoria%2C%200002%2C%20South%20Africa!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>C.L.E.A.N.</h3>
+                    <p>Centre for Leadership Excellence for African Nations (167-139 NPO). Equipping, mentoring and training young African leaders for active ethical leadership and administrative service delivery.</p>
+                    <p style="font-size: 0.85rem; color: #777;">
+                        84 Bourke Street, Sunnyside, Pretoria, South Africa
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home" onclick="navigateTo('home')">Home</a></li>
+                        <li><a href="#lecturers" onclick="navigateTo('lecturers')">Main Lecturers</a></li>
+                        <li><a href="#water-project" onclick="navigateTo('water-project')">Clean Water Project</a></li>
+                        <li><a href="#gallery" onclick="navigateTo('gallery')">Gallery</a></li>
+                        <li><a href="#rsvp" onclick="navigateTo('rsvp')">RSVP / Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Core Values</h4>
+                    <ul>
+                        <li><a href="#lecturers" onclick="navigateTo('lecturers')">Servant Leadership</a></li>
+                        <li><a href="#lecturers" onclick="navigateTo('lecturers')">Thought Leadership</a></li>
+                        <li><a href="#lecturers" onclick="navigateTo('lecturers')">Stewardship Leadership</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Leadership</h4>
+                    <ul>
+                        <li><a href="#lecturers" onclick="navigateTo('lecturers')">Dr Julius Mbu (CEO)</a></li>
+                        <li><a href="#lecturers" onclick="navigateTo('lecturers')">Dr Lebogang Seoketsa</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+27659965641">+27 65 996 5641</a></li>
+                        <li><a href="mailto:cleanafricanleadership@gmail.com">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; <span id="currentYear"></span> C.L.E.A.N. — Centre for Leadership Excellence for African Nations (167-139 NPO). All rights reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <span>Developed By <a href="https://palexdigital.pages.dev/" target="_blank" rel="noopener noreferrer" class="credit-link">paléXdigital</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR ROUTING & INTERACTION -->
+    <script>
+        // Dynamic year update
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // SPA Navigation Router
+        function navigateTo(pageId) {
+            const pages = document.querySelectorAll('.page-view');
+            pages.forEach(page => page.classList.remove('active'));
+
+            const selectedPage = document.getElementById('page-' + pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            const navMenu = document.getElementById('navMenu');
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
+        }
+
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Dynamic Leadership Values Tab Switcher
+        const tabData = {
+            tab1: {
+                title: "Servant Leadership",
+                desc: "Cultivating a mindset centered on putting public and community needs first, fostering empathy, humility, and active civic participation in administrative delivery.",
+                items: ["Community-first administrative approaches", "Ethical engagement with underserved populations", "Humble and accountable governance models"]
+            },
+            tab2: {
+                title: "Thought Leadership",
+                desc: "Fostering critical thinking, educational innovation, and strategic problem-solving to address public service and governance challenges across Africa.",
+                items: ["Analytical problem-solving frameworks", "Educational innovation in leadership", "Strategic policy formulation for service delivery"]
+            },
+            tab3: {
+                title: "Stewardship Leadership",
+                desc: "Instilling principles of financial transparency, ethical resource allocation, responsibility, and sustainable public sector governance.",
+                items: ["Financial transparency & accountability", "Ethical resource management", "Sustainable community asset protection"]
+            }
+        };
+
+        function switchEcoTab(key, cardElement) {
+            const cards = document.querySelectorAll('.eco-card');
+            cards.forEach(c => c.classList.remove('active'));
+            cardElement.classList.add('active');
+
+            const data = tabData[key];
+            if (data) {
+                document.getElementById('tabTitle').textContent = data.title;
+                document.getElementById('tabDesc').textContent = data.desc;
+                document.getElementById('tabItem1').textContent = data.items[0];
+                document.getElementById('tabItem2').textContent = data.items[1];
+                document.getElementById('tabItem3').textContent = data.items[2];
+            }
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for contacting C.L.E.A.N. Your message has been received.');
+            event.target.reset();
+        }
+
+        // URL Hash Routing
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash && document.getElementById('page-' + hash)) {
+                navigateTo(hash);
+            }
+        });
+    </script>
+</body>
+</html>
