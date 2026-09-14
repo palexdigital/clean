@@ -249,52 +249,48 @@
         }
 
         /* HERO SECTION */
-        .hero {
-            padding: 4rem 0 5rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
+        .hero-section {
+            position: relative;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./herologo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: var(--bg-white);
+            padding: 6rem 0 7rem;
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+            margin-bottom: 2rem;
         }
 
-        .hero-content h1 {
+        .hero-section h1 {
+            color: var(--bg-white);
             margin-bottom: 1.5rem;
         }
 
-        .hero-content p {
+        .hero-section p {
+            color: rgba(255, 255, 255, 0.9);
             font-size: 1.2rem;
             margin-bottom: 2rem;
-            max-width: 520px;
+            max-width: 650px;
+        }
+
+        .hero-section .btn-outline {
+            border-color: var(--bg-white);
+            color: var(--bg-white);
+        }
+
+        .hero-section .btn-outline:hover {
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+        }
+
+        .hero-content {
+            max-width: 800px;
         }
 
         .hero-ctas {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-        }
-
-        .hero-gallery {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-img-card {
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-            position: relative;
-            width: 100%;
-        }
-
-        .hero-img-card img {
-            width: 100%;
-            height: auto;
-            transition: var(--transition-standard);
-        }
-
-        .hero-img-card:hover img {
-            transform: scale(1.04);
         }
 
         /* STATS COUNTER GRID */
@@ -783,7 +779,7 @@
 
         /* RESPONSIVE DESIGN BREAKPOINTS */
         @media (max-width: 1024px) {
-            .hero, .teal-banner, .insight-feature, .ecosystem-grid, .location-section {
+            .teal-banner, .insight-feature, .ecosystem-grid, .location-section {
                 grid-template-columns: 1fr;
             }
 
@@ -891,19 +887,16 @@
         <div id="page-home" class="page-view active">
             
             <!-- HERO SECTION -->
-            <section class="container hero">
-                <div class="hero-content">
-                    <span class="badge badge-burgundy">Non-Profit Organization (167-139 NPO)</span>
-                    <h1>Centre for Leadership Excellence for African Nations</h1>
-                    <p>To equip, mentor and train young African leaders with a vision to build active ethical leaders and establish a support network for them to achieve excellence in administrative service delivery.</p>
-                    <div class="hero-ctas">
-                        <a href="#water-project" class="btn btn-burgundy" onclick="navigateTo('water-project')">Clean Water Project →</a>
-                        <a href="#lecturers" class="btn btn-outline" onclick="navigateTo('lecturers')">Meet Our Lecturers</a>
-                    </div>
-                </div>
-                <div class="hero-gallery">
-                    <div class="hero-img-card">
-                        <img src="./herologo.png" alt="C.L.E.A.N. Hero Logo">
+            <section class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <span class="badge badge-burgundy">Non-Profit Organization (167-139 NPO)</span>
+                        <h1>Centre for Leadership Excellence for African Nations</h1>
+                        <p>To equip, mentor and train young African leaders with a vision to build active ethical leaders and establish a support network for them to achieve excellence in administrative service delivery.</p>
+                        <div class="hero-ctas">
+                            <a href="#water-project" class="btn btn-burgundy" onclick="navigateTo('water-project')">Clean Water Project →</a>
+                            <a href="#lecturers" class="btn btn-outline" onclick="navigateTo('lecturers')">Meet Our Lecturers</a>
+                        </div>
                     </div>
                 </div>
             </section>
