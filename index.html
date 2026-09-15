@@ -58,7 +58,7 @@
             background-color: var(--bg-cream);
             color: var(--text-dark);
             line-height: 1.6;
-            min-width: 100%;
+            width: 100%;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
@@ -233,12 +233,43 @@
         }
 
         .mobile-toggle {
-            display: none;
+            display: flex;
             background: none;
             border: none;
             font-size: 1.8rem;
             cursor: pointer;
             color: var(--text-dark);
+        }
+
+        @media (max-width: 992px) {
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-cream);
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                padding: 2rem 0;
+                border-bottom: 1px solid var(--border-color);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+        }
+
+        @media (min-width: 993px) {
+            .mobile-toggle {
+                display: none;
+            }
         }
 
         /* PAGE VIEWS MANAGEMENT */
@@ -308,6 +339,13 @@
             text-align: center;
         }
 
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
         .stat-item h3 {
             font-size: clamp(2rem, 4vw, 2.8rem);
             color: var(--primary-burgundy);
@@ -348,6 +386,12 @@
             margin-bottom: 3rem;
         }
 
+        @media (max-width: 992px) {
+            .insight-feature {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .insight-img {
             height: 100%;
             min-height: 380px;
@@ -383,6 +427,13 @@
             margin: 4rem 0;
         }
 
+        @media (max-width: 992px) {
+            .teal-banner {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem;
+            }
+        }
+
         .teal-banner h2, .teal-banner p {
             color: var(--bg-white);
         }
@@ -413,6 +464,12 @@
             margin: 4rem 0;
         }
 
+        @media (max-width: 992px) {
+            .dark-ecosystem {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+
         .dark-ecosystem h2, .dark-ecosystem h3, .dark-ecosystem h4 {
             color: var(--bg-white);
         }
@@ -426,6 +483,12 @@
             grid-template-columns: 1fr 1.2fr;
             gap: 3rem;
             margin-top: 3rem;
+        }
+
+        @media (max-width: 992px) {
+            .ecosystem-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .ecosystem-list {
@@ -504,6 +567,18 @@
             margin-top: 2.5rem;
         }
 
+        @media (max-width: 992px) {
+            .media-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .card {
             background-color: var(--bg-white);
             border-radius: var(--radius-md);
@@ -559,6 +634,14 @@
             margin: 4rem 0;
         }
 
+        @media (max-width: 992px) {
+            .cta-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 2.5rem 1.5rem;
+            }
+        }
+
         .cta-banner h2 {
             color: var(--bg-white);
             margin-bottom: 0.8rem;
@@ -576,6 +659,18 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
             margin-top: 2.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .fellows-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .fellows-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .fellow-card {
@@ -626,11 +721,23 @@
             margin: 4rem 0;
         }
 
+        @media (max-width: 992px) {
+            .location-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .location-info {
             padding: 3.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .location-info {
+                padding: 2rem 1.5rem;
+            }
         }
 
         .location-info address {
@@ -685,6 +792,12 @@
             gap: 3rem;
         }
 
+        @media (max-width: 992px) {
+            .two-column-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .water-project-hero {
             display: grid;
             grid-template-columns: 1.2fr 1fr;
@@ -693,10 +806,22 @@
             margin-bottom: 4rem;
         }
 
+        @media (max-width: 992px) {
+            .water-project-hero {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .values-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
+        }
+
+        @media (max-width: 992px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .form-group {
@@ -739,6 +864,18 @@
             grid-template-columns: 2fr repeat(4, 1fr);
             gap: 2.5rem;
             margin-bottom: 4rem;
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .footer-brand h3 {
@@ -797,101 +934,6 @@
         .credit-link:hover {
             color: var(--bg-white);
             text-decoration: underline;
-        }
-
-        /* RESPONSIVE MEDIA QUERIES (HORIZONTAL / SIDE-BY-SIDE LAYOUT) */
-        @media (max-width: 992px) {
-            .mobile-toggle {
-                display: block;
-                order: 1;
-            }
-
-            .logo {
-                order: 2;
-                margin: 0 auto;
-            }
-
-            .nav-actions {
-                order: 3;
-            }
-
-            .nav-container {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            .nav-menu {
-                position: absolute;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: var(--bg-cream);
-                flex-direction: column;
-                padding: 1.5rem;
-                gap: 1rem;
-                border-bottom: 1px solid var(--border-color);
-                display: none;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            /* Maintain multi-column layouts side-by-side with horizontal scroll on small screens */
-            .stats-grid,
-            .media-grid,
-            .fellows-grid,
-            .values-grid {
-                grid-template-columns: repeat(3, minmax(220px, 1fr));
-                overflow-x: auto;
-                padding-bottom: 1rem;
-                scroll-snap-type: x mandatory;
-            }
-
-            .stats-grid > *,
-            .media-grid > *,
-            .fellows-grid > *,
-            .values-grid > * {
-                scroll-snap-align: start;
-            }
-
-            .footer-grid {
-                grid-template-columns: repeat(5, minmax(180px, 1fr));
-                overflow-x: auto;
-                padding-bottom: 1rem;
-            }
-
-            .insight-feature,
-            .teal-banner,
-            .ecosystem-grid,
-            .location-section,
-            .water-project-hero,
-            .two-column-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .stats-grid,
-            .media-grid,
-            .fellows-grid,
-            .values-grid {
-                grid-template-columns: repeat(3, minmax(180px, 1fr));
-            }
-
-            .footer-grid {
-                grid-template-columns: repeat(5, minmax(140px, 1fr));
-            }
-
-            .insight-content,
-            .teal-banner,
-            .dark-ecosystem,
-            .location-info,
-            .cta-banner {
-                padding: 1.5rem 1rem;
-            }
         }
     </style>
 </head>
