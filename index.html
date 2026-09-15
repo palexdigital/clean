@@ -799,7 +799,7 @@
             text-decoration: underline;
         }
 
-        /* RESPONSIVE MEDIA QUERIES */
+        /* RESPONSIVE MEDIA QUERIES (HORIZONTAL / SIDE-BY-SIDE LAYOUT) */
         @media (max-width: 992px) {
             .mobile-toggle {
                 display: block;
@@ -839,103 +839,50 @@
                 display: flex;
             }
 
-            .insight-feature {
-                grid-template-columns: 1fr;
-            }
-
-            .teal-banner {
-                grid-template-columns: 1fr;
-            }
-
-            .ecosystem-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .location-section {
-                grid-template-columns: 1fr;
-            }
-
-            .water-project-hero {
-                grid-template-columns: 1fr;
-            }
-
-            .two-column-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .media-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .fellows-grid {
-                grid-template-columns: 1fr;
-            }
-
+            /* Maintain multi-column layouts side-by-side with horizontal scroll on small screens */
+            .stats-grid,
+            .media-grid,
+            .fellows-grid,
             .values-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(3, minmax(220px, 1fr));
+                overflow-x: auto;
+                padding-bottom: 1rem;
+                scroll-snap-type: x mandatory;
+            }
+
+            .stats-grid > *,
+            .media-grid > *,
+            .fellows-grid > *,
+            .values-grid > * {
+                scroll-snap-align: start;
             }
 
             .footer-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(5, minmax(180px, 1fr));
+                overflow-x: auto;
+                padding-bottom: 1rem;
+            }
+
+            .insight-feature,
+            .teal-banner,
+            .ecosystem-grid,
+            .location-section,
+            .water-project-hero,
+            .two-column-grid {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
         @media (max-width: 600px) {
-            .btn {
-                padding: 0.6rem 1rem;
-                font-size: 0.85rem;
-            }
-
-            .logo img {
-                height: 40px;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .media-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .fellows-grid {
-                grid-template-columns: 1fr;
-            }
-
+            .stats-grid,
+            .media-grid,
+            .fellows-grid,
             .values-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(3, minmax(180px, 1fr));
             }
 
             .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .insight-feature {
-                grid-template-columns: 1fr;
-            }
-
-            .teal-banner {
-                grid-template-columns: 1fr;
-            }
-
-            .ecosystem-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .location-section {
-                grid-template-columns: 1fr;
-            }
-
-            .water-project-hero {
-                grid-template-columns: 1fr;
-            }
-
-            .two-column-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(5, minmax(140px, 1fr));
             }
 
             .insight-content,
@@ -943,16 +890,7 @@
             .dark-ecosystem,
             .location-info,
             .cta-banner {
-                padding: 2rem 1.5rem;
-            }
-
-            .section-padding,
-            .content-block {
-                padding: 2.5rem 0;
-            }
-
-            .page-header {
-                padding: 3rem 0 2.5rem;
+                padding: 1.5rem 1rem;
             }
         }
     </style>
